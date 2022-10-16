@@ -9,7 +9,9 @@ import java.lang.ref.WeakReference
 class App : Application() {
 
     companion object{
+
         private var context_: WeakReference<Context>? = null
+
         fun getContext(): Context? { return context_?.get() }
     }
 

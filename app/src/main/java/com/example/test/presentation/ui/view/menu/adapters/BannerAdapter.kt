@@ -10,7 +10,7 @@ import com.example.test.databinding.BannerItemBinding
 
 class BannerAdapter: RecyclerView.Adapter<BannerAdapter.ViewHolder>() {
 
-    private val banners = listOf(R.drawable.banner1, R.drawable.banner2, R.drawable.banner3,    )
+    private val banners = listOf(R.drawable.banner1, R.drawable.banner2)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context).inflate(R.layout.banner_item, parent, false)
@@ -19,7 +19,9 @@ class BannerAdapter: RecyclerView.Adapter<BannerAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.binding) {
-            Glide.with(root).load(banners[position]).into(banner)
+            Glide.with(root)
+                .load(banners[position])
+                .into(banner)
         }
     }
 

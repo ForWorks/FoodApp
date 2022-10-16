@@ -5,4 +5,5 @@ object Constants {
     const val HEADER_HOST = "X-RapidAPI-Host: burgers1.p.rapidapi.com"
     const val BASE_URL = "https://burgers1.p.rapidapi.com"
     const val BURGER_ENDPOINT = "/burgers"
+    const val ERROR = "ERROR"
 }

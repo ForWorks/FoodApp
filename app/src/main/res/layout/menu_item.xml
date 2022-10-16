@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ingredients"
+        android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -51,7 +51,7 @@
         android:textColor="@color/bottom_items"
         app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/description"
         app:strokeColor="@color/bottom_items"
         app:strokeWidth="1dp"
         tools:ignore="TextContrastCheck" />

@@ -19,11 +19,11 @@ class MenuAdapter(private val productList: List<UIProduct>): RecyclerView.Adapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.binding) {
             val product = productList[position]
-            Glide.with(root).load(R.drawable.burger).into(foodIcon)
+            Glide.with(root)
+                .load(R.drawable.pizza)
+                .into(foodIcon)
             foodName.text = product.name
-            var description = ""
-            product.ingredients.forEach { description += "$it, " }
-            ingredients.text = description.subSequence(0, description.length - 2)
+            description.text = product.description
         }
     }
 

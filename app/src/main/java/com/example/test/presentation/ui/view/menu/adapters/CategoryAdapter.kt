@@ -1,6 +1,5 @@
 package com.example.test.presentation.ui.view.menu.adapters
 
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,9 @@ import com.example.test.presentation.di.App
 
 class CategoryAdapter(private val categoryList: Array<String>, private val listener: (Int) -> Unit): RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
-    companion object { private var currentPosition = 0 }
+    companion object {
+        private var currentPosition = 0
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context).inflate(R.layout.category_item, parent, false)
@@ -23,7 +24,9 @@ class CategoryAdapter(private val categoryList: Array<String>, private val liste
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.binding) {
+
             category.text = categoryList[position]
+
             if(currentPosition == position) {
                 setBackground(categoryRoot, R.drawable.category_selected)
                 setTextColor(category, R.color.bottom_items)
@@ -32,6 +35,7 @@ class CategoryAdapter(private val categoryList: Array<String>, private val liste
                 setBackground(categoryRoot, R.drawable.category_unselected)
                 setTextColor(category, R.color.description)
             }
+
             categoryRoot.setOnClickListener {
                 notifyItemChanged(currentPosition)
                 currentPosition = holder.adapterPosition

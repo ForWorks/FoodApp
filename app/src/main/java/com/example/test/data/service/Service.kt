@@ -9,6 +9,7 @@ import retrofit2.http.GET
 import retrofit2.http.Headers
 
 interface Service {
+
     @Headers(HEADER_KEY, HEADER_HOST)
     @GET(BURGER_ENDPOINT)
     suspend fun getData(): Response<List<Product>>

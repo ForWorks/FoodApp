@@ -1,8 +1,12 @@
 package com.example.test.domain.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "uiProduct")
 data class UIProduct(
+    @PrimaryKey
+    val id : Int,
     val name : String,
-    val restaurant : String,
-    val description : String,
-    val ingredients : List<String>
+    val description: String
 )

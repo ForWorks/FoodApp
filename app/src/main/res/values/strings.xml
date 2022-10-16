@@ -3,8 +3,9 @@
     <string name="menu">Меню</string>
     <string name="profile">Профиль</string>
     <string name="basket">Корзина</string>
-    <string name="basket_text">Basket</string>
-    <string name="profile_text">Profile</string>
+    <string name="basket_text">Корзина</string>
+    <string name="profile_text">Профиль</string>
+    <string name="check_connection">Проверьте интернет соединение!</string>
     <string name="cost">от 345 р</string>
     <array name="categories">
         <item>Пицца</item>
@@ -14,5 +15,6 @@
     </array>
     <array name="cities">
         <item>Москва</item>
+        <item>Минск</item>
     </array>
 </resources>

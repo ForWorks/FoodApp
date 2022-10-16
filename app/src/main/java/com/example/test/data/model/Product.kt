@@ -20,6 +20,6 @@ data class Product (
     val addresses : List<Addresses>
 ) {
     fun getUIProduct(): UIProduct {
-        return UIProduct(name, restaurant, description, ingredients)
+        return UIProduct(id, name, description)
     }
 }
